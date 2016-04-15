@@ -1,0 +1,25 @@
+{
+  "name": "MaxOrlovsky",
+  "title": "MaxOrlovsky",
+  "description": "Max Orlovsky website",
+  "license": "unlicensed",
+  "private": true,
+  "repository": {
+    "type": "svn",
+    "url": "https://svn.maxorlovsky.net/svn/maxorlovsky.net"
+  },
+  "version": "1.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch" : "^1.0.0",
+    "grunt-sass": "^1.1.0"
+  },
+  "engines": {
+    "node": "5.6.0",
+    "npm": "3.6.0"
+  }
+}

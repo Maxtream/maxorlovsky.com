@@ -1,0 +1,24 @@
+@media (min-width: $breakPointPC) {
+	footer {
+		width: 70%;
+	}
+
+	.content {
+		width: 70%;
+	}
+
+	header {
+		nav {
+			.link-wrapper {
+				display: block;
+			}
+			.burger {
+				display: none;
+			}
+		}
+	}
+
+	.sidebar {
+		display: none;
+	}
+}
