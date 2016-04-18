@@ -1,0 +1,23 @@
+input[type="text"] {
+    width: 60%;
+    margin: 10% auto;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-size: 40px;
+    text-align: center;
+    height: 60px;
+}
+
+.error, .success {
+    text-align: center;
+    padding: 5% 0;
+    margin: 5% 0;
+    font-size: 30px;
+}
+
+.error {
+    background-color: #e55;
+}
+.success {
+    background-color: #090;
+}
