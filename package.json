@@ -5,10 +5,10 @@
   "license": "unlicensed",
   "private": true,
   "repository": {
-    "type": "svn",
-    "url": "https://svn.maxorlovsky.net/svn/maxorlovsky.net"
+    "type": "git",
+    "url": "https://github.com/Maxtream/maxorlovsky.net.git"
   },
-  "version": "1.1.0",
+  "version": "1.2.0",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.0",
