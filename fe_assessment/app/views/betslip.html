@@ -1,0 +1,58 @@
+<div class="betslip">
+	<header class="header">
+		<div class="">Your account balance is 325,50 €</div>
+		<div class="buttons">
+			<div class="selected">Single</div>
+			<div>Combi</div>
+			<div>System</div>
+		</div>
+	</header>
+	
+	<div class="messages" ng-show="$parent.parentObject.betslips.length == 0 || $parent.parentObject.error || $parent.parentObject.submitted">
+		<div class="empty-betslips" ng-show="$parent.parentObject.betslips.length == 0 &amp;&amp; $parent.parentObject.submitted != 1 &amp;&amp; !$parent.parentObject.error">
+			Your bet slip is empty. Add bets first.
+		</div>
+
+		<div class="submitted" ng-show="$parent.parentObject.submitted == 1">
+			Betslip submitted
+		</div>
+
+		<div class="error" ng-show="$parent.parentObject.error">
+			Error: {{$parent.parentObject.error}}
+		</div>
+	</div>
+
+	<div class="betslip-odds" ng-show="$parent.parentObject.betslips">
+		<div ng-repeat="(key, odd) in $parent.parentObject.betslips">
+			<div class="info">
+				<div class="teams" title="{{::odd.teams}}">{{::odd.teams}}</div>
+				<div class="names">{{::odd.displayName}} {{::odd.name}}</div>
+				<div class="value">{{::odd.value}}</div>
+			</div>
+			<div class="delete" ng-click="$parent.removeBetslip(key)">X</div>
+		</div>
+	</div>
+
+	<footer class="actions">
+		<div class="number-of-bets">
+			<div class="text">Number of bets</div>
+			<div class="number">{{$parent.parentObject.betslips.length}}</div>
+		</div>
+		<div class="wager">
+			<div class="title">Wager</div>
+			<div class="value">
+				<div class="input-wrapper">
+					<input type="text" maxlength="8" ng-model="$parent.parentObject.wager" ng-keyup="$parent.calculateGain()" /> <span>€</span>
+				</div>
+			</div>
+		</div>
+		<div class="possible-gain">
+			<div class="title">Possible gain</div>
+			<div class="value">
+				<span>{{$parent.parentObject.gain}}</span> €
+			</div>
+		</div>
+		<div class="clear" ng-click="$parent.cleanBets()">Clear</div>
+		<div class="place-bet" ng-click="$parent.placeBet()">Place bet</div>
+	</footer>
+</div>

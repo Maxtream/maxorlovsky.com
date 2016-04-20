@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fe">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, maximum-scale=1, width=device-width" />
+    <title>FE</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/build/styles.css" />
+</head>
+<body ng-controller="MainController" ng-cloak ng-swipe-right="showBetslip = 1" ng-class="{'no-scroll': showBetslip}">
+    <section class="loading" ng-hide="loaded"><p>Loading in progress...</p></section>
+    <section class="rotate-screen"><p>Please rotate your screen as seen on image</p></section>
+
+    <div class="revert-swipe-right" ng-click="showBetslip = 0" ng-show="showBetslip == 1"></div>
+
+    <div class="wrapper" ng-class="{'wrapper-slide': showBetslip}">
+        <header class="top-navigation">
+            <ul>
+                <li class="hardcoded"><!-- Not putting here anything as this is not required as mentioned in README.md --></li>
+                <li class="betslip-opener" ng-click="showBetslip = 1">
+                    <div class="betslip-counter">Bet slip <span>{{parentObject.betslips.length}}</span></div>
+                    <div class="menu-icon"></div>
+                </li>
+            </ul>
+        </header>
+
+        <section class="container" ng-view></section>
+    </div>
+
+    <section class="betslip-wrapper" ng-include="'/app/views/betslip.html'"></section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.min.js"></script>
+    <script src="assets/build/scripts.js"></script>
+</body>
+</html>

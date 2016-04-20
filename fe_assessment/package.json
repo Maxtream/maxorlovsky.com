@@ -1,0 +1,18 @@
+{
+    "name": "FE-Assessment",
+    "version": "0.0.1",
+    "description": "Tipico FrontEnd Assessment",
+    "dependencies": {
+        "grunt": "~0.4.5",
+        "grunt-contrib-concat": "~1.0.0",
+        "grunt-contrib-cssmin": "~0.14.0",
+        "grunt-contrib-jshint": "~1.0.0",
+        "grunt-contrib-uglify": "~0.11.1",
+        "grunt-contrib-watch" : "~0.6.1",
+        "grunt-sass": "~1.1.0"
+    },
+	"engines": {
+        "npm": "3.7.3",
+		"node": "5.6.0"
+	}
+}

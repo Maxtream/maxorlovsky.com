@@ -1,0 +1,38 @@
+<div class="field-wrapper" ng-hide="gameEnded === true" ng-cloak>
+	<div class="field">
+		<div class="game-time">
+			<p>{{gameTime}}</p>
+			live
+		</div>
+		<div class="game-teams">
+			<div class="top-team">{{topTeam}} <span class="score">{{topTeamScore}}</span></div>
+			<div class="bottom-team">{{bottomTeam}} <span class="score">{{bottomTeamScore}}</span></div>
+		</div>
+
+		<div class="events">
+			<div class="freekick-left" ng-show="liveEventTeam == 1 &amp;&amp; liveEventAction == 'freekick'"></div>
+			<div class="goalkick-left" ng-show="liveEventTeam == 1 &amp;&amp; liveEventAction == 'goalkick'"></div>
+			<div class="ongoal-left" ng-show="liveEventTeam == 1 &amp;&amp; liveEventAction == 'ongoal'"></div>
+			<div class="penalty-left" ng-show="liveEventTeam == 1 &amp;&amp; liveEventAction == 'penalty'"></div>
+
+			<div class="freekick-right" ng-show="liveEventTeam == 2 &amp;&amp; liveEventAction == 'freekick'"></div>
+			<div class="goalkick-right" ng-show="liveEventTeam == 2 &amp;&amp; liveEventAction == 'goalkick'"></div>
+			<div class="ongoal-right" ng-show="liveEventTeam == 2 &amp;&amp; liveEventAction == 'ongoal'"></div>
+			<div class="penalty-right" ng-show="liveEventTeam == 2 &amp;&amp; liveEventAction == 'penalty'"></div>
+		</div>
+
+		<div class="on-field">
+			<div class="action-name">{{actionName}}</div>
+			<div class="team-name">{{actionTeamName}}</div>
+		</div>
+	</div>
+</div>
+
+<div class="odds">
+	<div class="odd" ng-repeat="odd in odds">
+		<span>{{::odd.displayName}}</span>
+		<div class="buttons">
+			<button ng-repeat="button in odd.results | orderBy : '' : true" ng-click="addBetslip(button.id)"><span>{{::button.name}}</span> {{::button.value}}</button>
+		</div>
+	</div>
+</div>
