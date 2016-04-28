@@ -18,10 +18,10 @@
     <base href="/">
 </head>
 
-<body ng-controller="MainController" ng-cloak>
+<body ng-controller="MainController" ng-cloak ng-class="{'sidebar-open': parentObject.sidebar}">
 
-    <section class="sidebar-closer" ng-class="{'active': parentObject.sidebar}" ng-click="parentObject.sidebar = 0"></section>
-    <section class="sidebar" ng-include="'/app/views/sidebar.html'" ng-class="{'active': parentObject.sidebar}"></section>
+    <section class="sidebar-closer" ng-click="parentObject.sidebar = 0"></section>
+    <section class="sidebar" ng-include="'/app/views/sidebar.html'"></section>
 
     <header>
         <nav>

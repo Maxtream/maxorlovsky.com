@@ -22,7 +22,9 @@ module.exports = function(grunt) {
             css: {
                 src: [
                     '<%= dirs.css %>/global.scss',
-                    '<%= dirs.css %>/*.scss',
+                    '<%= dirs.css %>/mobile.scss',
+                    '<%= dirs.css %>/tablet.scss',
+                    '<%= dirs.css %>/pc.scss',
                 ],
                 dest: '<%= dirs.output %>/styles.css'
             },
