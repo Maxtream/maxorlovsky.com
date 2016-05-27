@@ -51,3 +51,21 @@ a {
 		color: #000;
 	}
 }
+
+@keyframes fadeIn {
+    from    { opacity: 0; }
+    to 		{ opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from    { opacity: 1; }
+    to 		{ opacity: 0; }
+}
+
+.ng-enter {
+	animation: fadeIn 0.5s both ease-in;
+	z-index: 8888;
+}
+.ng-leave {
+	display: none;
+}
