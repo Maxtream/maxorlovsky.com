@@ -18,7 +18,7 @@
     <base href="/">
 </head>
 
-<body ng-controller="MainController" ng-cloak ng-class="{'sidebar-open': parentObject.sidebar}">
+<body ng-controller="MainController" ng-cloak ng-class="{'sidebar-open': parentObject.sidebar}" ng-swipe-right="parentObject.sidebar = 0" ng-swipe-left="parentObject.sidebar = 1" ng-swipe-disable-mouse>
 
     <section class="sidebar-closer" ng-click="parentObject.sidebar = 0"></section>
     <section class="sidebar" ng-include="'/app/views/sidebar.html'"></section>

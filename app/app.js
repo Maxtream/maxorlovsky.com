@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute', 'ngAnimate'])
+angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/about', {
