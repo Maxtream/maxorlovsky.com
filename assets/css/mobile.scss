@@ -1,5 +1,6 @@
 header {
 	background-image: url($img+'/bg.jpg');
+	background-position: center;
 	transition: .5s;
 
 	.info {
@@ -15,7 +16,8 @@ header {
 
 		h1 {
 			width: 60%;
-			margin: 30px auto 0 auto;
+			margin: 25px auto 0 auto;
+			line-height: 36px;
 			color: $alternativeColor;
 			text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.8);
 			text-align: center;
@@ -54,7 +56,7 @@ header {
 			margin-top: 20px;
 			margin-right: 5%;
 			a {
-				font-size: 28px;
+				font-size: 32px;
 				font-family: $font;
 				white-space: nowrap;
 			}
@@ -96,6 +98,16 @@ header {
 
 	.sidebar-open & {
 		transform: translate(-80%, 0);
+	}
+
+	&.night {
+		background-image: url($img+'/bg-night.jpg');
+		.info h1 span {
+			color: $goldColor; 
+		}
+		nav .burger svg {
+			fill: #fff;
+		}
 	}
 }
 

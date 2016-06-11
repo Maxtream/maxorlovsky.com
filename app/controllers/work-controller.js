@@ -3,8 +3,30 @@ angular.module('app').controller('WorkController', ['$scope', function ($scope) 
 
 	$scope.works = [
 		{
+			name: 'StarVegas.es (Greentube)',
+			description: 'Online Casino for Spanish market. Did development of a project in a team and new features afterwards. Symphony CMS and internal API was used for storring config and data in database. XSLT as templating system.',
+			image: 'starvegas-es.png',
+			url: 'https://www.starvegas.es',
+			html: true,
+			js: true,
+			css: true,
+			php: true,
+			db: true
+		},
+		{
+			name: 'FenikssCasino.Lv (Greentube)',
+			description: 'Online Casino for Latvian market. When I joined team who developed this project it was mostly done. What I did for this project was improvements and new features afterwards. Symphony CMS and internal API was used for storring config and data in database. XSLT as templating system.',
+			image: 'fenikss.png',
+			url: 'https://www.feniksscasino.lv',
+			html: true,
+			js: true,
+			css: true,
+			php: true,
+			db: true
+		},
+		{
 			name: 'Pentaclick eSports',
-			description: 'My biggest yet pet project',
+			description: 'My biggest yet pet project. Project is about "eSports" or competitive gaming. Website with difficult tournament management system.',
 			image: 'pcesports.png',
 			url: 'http://www.pcesports.com',
 			html: true,

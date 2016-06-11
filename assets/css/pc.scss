@@ -20,6 +20,21 @@
 				display: none;
 			}
 		}
+		&.night {
+			nav .link-wrapper {
+				a {
+					color: #fff;
+				}
+				&:hover {
+					a {
+						color: $goldColor;
+					}
+					.liner {
+						background-color: $goldColor;
+					}
+				}
+			}
+		}
 	}
 
 	.sidebar {
