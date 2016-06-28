@@ -72,7 +72,7 @@ angular.module('app').controller('WorkController', ['$scope', function ($scope) 
 			name: 'Egamings',
 			description: 'Company "business card" website, developed using WordPress. Owned by Egamings of course, developed by me.',
 			image: 'egamings.png',
-			url: 'http://www.egamings.com',
+			url: 'https://www.egamings.com',
 			html: true,
 			js: true,
 			css: false,
@@ -80,10 +80,21 @@ angular.module('app').controller('WorkController', ['$scope', function ($scope) 
 			db: false
 		},
 		{
+			name: 'Grand Rio (Egamings)',
+			description: 'Online casino build on made by our team White Label Casino solutions. It was second after Binarium.',
+			image: 'grandrio-com.png',
+			url: 'https://www.grandrio.com',
+			html: true,
+			js: true,
+			css: true,
+			php: true,
+			db: true
+		},
+		{
 			name: 'Binarium (Egamings)',
 			description: 'Egamings.com project is not owned but build by me. Website was written in a mix of frameworks and CMSes that were used. Too much to describe in this small block.',
 			image: 'binarium.png',
-			url: 'http://www.binarium.ru',
+			url: 'https://www.binarium.ru',
 			html: true,
 			js: true,
 			css: true,

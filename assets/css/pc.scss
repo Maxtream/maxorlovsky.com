@@ -1,4 +1,8 @@
 @media (min-width: $breakPointPC) {
+	.burger {
+		display: none;
+	}
+	
 	footer {
 		width: 70%;
 	}
@@ -12,18 +16,18 @@
 			.link-wrapper {
 				display: block;
 				a {
+					font-size: 37px;
 					color: #000;
 					border-bottom: 0;
+					text-shadow: 1px 2px 1px rgba(255, 255, 255, 1);
 				}
-			}
-			.burger {
-				display: none;
 			}
 		}
 		&.night {
 			nav .link-wrapper {
 				a {
 					color: #fff;
+					text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
 				}
 				&:hover {
 					a {
