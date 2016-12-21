@@ -27,4 +27,11 @@ angular.module('app').controller('MainController', ['$scope', '$anchorScroll', f
 	if (hours <= 7 || hours >= 20) {
 		$scope.parentObject.night = true;
 	}
+
+	month = new Date().getMonth();
+	if (month == 11 || month >= 1) {
+		$scope.parentObject.mood = 'winter';
+		// BG is dark, so night always required
+		$scope.parentObject.night = true;
+	}
 }]);

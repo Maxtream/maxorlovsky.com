@@ -17,11 +17,25 @@ $breakPointPC: 1024px;
 }
 
 /* Reset like things */
-img,p,td{border: 0;margin: 0;padding: 0;}
-a{text-decoration: none;color: $mainColor;transition: .5s;}
-a:hover{color: #555; }
-.fright {float:right;}
-a img {border: 0;}
+img, p {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $mainColor;
+    transition: .5s;
+    outline: none;
+    border: 0;
+    &:hover {
+        color: #555;
+    }
+}
+.fright {
+    float:right;
+}
 
 body {
     margin: 0;
