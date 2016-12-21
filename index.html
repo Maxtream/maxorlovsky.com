@@ -35,15 +35,19 @@
             </div>
         </nav>
 
-        <blockquote ng-if="parentObject.mood == 'winter'" class="snow">
-            <p>
-                <a href="#snow"></a>
-                <a href="#snow"></a>
-                <a href="#snow"></a>
-                <a href="#snow"></a>
-                <a href="#snow"></a>
-            </p>
-        </blockquote>
+        <div ng-if="parentObject.mood == 'winter'">
+            <blockquote class="snow">
+                <p>
+                    <a href="#snow"></a>
+                    <a href="#snow"></a>
+                    <a href="#snow"></a>
+                    <a href="#snow"></a>
+                    <a href="#snow"></a>
+                </p>
+            </blockquote>
+            
+            <div class="lights"></div>
+        </div>
 
         <div class="info">
             <img class="photo" src="assets/images/me.jpg" />
