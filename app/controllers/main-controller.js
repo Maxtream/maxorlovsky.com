@@ -29,7 +29,7 @@ angular.module('app').controller('MainController', ['$scope', '$anchorScroll', f
 	}
 
 	month = new Date().getMonth();
-	if (month == 11 || month >= 1) {
+	if (month == 11 || month <= 1) {
 		$scope.parentObject.mood = 'winter';
 		// BG is dark, so night always required
 		$scope.parentObject.night = true;
