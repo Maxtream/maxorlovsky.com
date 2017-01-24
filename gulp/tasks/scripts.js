@@ -4,10 +4,9 @@ const concat = require('gulp-concat');
 
 gulp.task('scripts', () => {
     gulp.src([
-			'./fe/src/**/*.js',
 			'./fe/app/**/*.js'
 		])
     	.pipe(uglify())
     	.pipe(concat('scripts.js'))
-        .pipe(gulp.dest('./public/dist/js/'))
+        .pipe(gulp.dest('./public/dist/js/'));
 });

@@ -2,15 +2,15 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/about', {
-			templateUrl: 'app/views/about.html',
+			templateUrl: 'dist/html/about.html',
 			controller: 'AboutController'
 		})
 		.when('/work', {
-			templateUrl: 'app/views/work.html',
+			templateUrl: 'dist/html/work.html',
 			controller: 'WorkController'
 		})
 		.when('/pet-projects', {
-			templateUrl: 'app/views/pet-projects.html',
+			templateUrl: 'dist/html/pet-projects.html',
 			controller: 'PetProjectsController'
 		})
 		.otherwise({ redirectTo: '/about' });

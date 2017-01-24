@@ -1,26 +1,29 @@
+// Main custom variables
 $mainColor: #000;
 $linkColor: #e79809;
 $alternativeColor: #fff;
 $goldColor: #ffd700;
 $defaultBorderRadius: 5px;
-$img: '/assets/images';
+$img: '/dist/assets/images';
 $font: 'Josefin Slab';
 $fontContent: 'Open Sans';
-
 $breakPointTablet: 768px;
 $breakPointPC: 1024px;
+
+// Bootstrap variables
+$font-size-h1: 2em;
+$link-hover-decoration: none;
+$link-color: $mainColor;
+$link-hover-color: #555;
+$font-family-base: $font;
+
+// Loading bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 
 @mixin clear() {
 	content: ' ';
 	display: block;
 	clear: both;
-}
-
-/* Reset like things */
-img, p {
-    border: 0;
-    margin: 0;
-    padding: 0;
 }
 
 a {
@@ -85,6 +88,7 @@ a {
 	display: none;
 }
 
+// Adding screen/size specific files
 @import './mobile.scss';
 @import './tablet.scss';
 @import './pc.scss';

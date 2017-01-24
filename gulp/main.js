@@ -8,7 +8,6 @@ gulp.task('default', ['styles', 'scripts']);
 gulp.task('dev', (cb) => {
 	runSequence(
 		'lint:script',
-		['styles', 'scripts'],
-		'watch',
+		['styles', 'scripts', 'assets', 'html'],
 	cb);
 });
