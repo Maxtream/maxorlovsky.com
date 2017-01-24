@@ -151,6 +151,7 @@ header {
 			perspective: 65px;
 			perspective-origin: 0 0;
 		}
+
 		a {
 			display: block;
 			background-image: url($img+'/snow.png');
@@ -163,7 +164,9 @@ header {
 			animation: sf1 7.5s linear infinite;
 			position: absolute;
 			overflow: hidden;
+			border-bottom: 0;
 		}
+
 		a:nth-child(1),
 		a:nth-child(2) {
 			left: -40%;
@@ -172,16 +175,19 @@ header {
 			animation-name: sf1;
 			background-position: 585px 525px;
 		}
+
 		a:nth-child(2) {
 			transform: translate3d(-300px,-300px,50px);
 			background-position: 125px 325px;
 		}
+
 		a:nth-child(3) {
 			width: calc(115% - -300px);
 			transform: translate3d(300px,-300px,25px);
 			animation-name: sf2;
 			background-position: 389px 338px;
 		}
+
 		a:nth-child(4) {
 			width: calc(165% - -300px);
 			height: 930px;
@@ -189,6 +195,7 @@ header {
 			animation-name: sf3;
 			background-position: 360px 189px;
 		}
+
 		a:nth-child(5) {
 			width: calc(190% - -300px);
 			height: 1076px;
@@ -196,15 +203,19 @@ header {
 			animation-name: sf4;
 			background-position: 399px 389px;
 		}
+
 		@keyframes sf1 {
 			to{ transform:translateZ(50px) }
 		}
+
 		@keyframes sf2 {
 			to{ transform:translateZ(25px) }
 		}
+
 		@keyframes sf3 {
 			to { transform:translateZ(-25px) }
 		}
+
 		@keyframes sf4 {
 			to { transform:translateZ(-50px) }
 		}
