@@ -12,30 +12,28 @@
 	}
 
 	header {
-		nav {
-			.link-wrapper {
-				display: block;
-				a {
-					font-size: 37px;
-					color: #000;
-					border-bottom: 0;
-					text-shadow: 1px 2px 1px rgba(255, 255, 255, 1);
-				}
+		nav .link-wrapper {
+			display: block;
+
+			a {
+				font-size: 37px;
+				color: #000;
+				border-bottom: 0;
+				text-shadow: 1px 2px 1px rgba(255, 255, 255, 1);
 			}
 		}
-		&.night {
-			nav .link-wrapper {
+		&.night nav .link-wrapper {
+			a {
+				color: #fff;
+				text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+			}
+
+			&:hover {
 				a {
-					color: #fff;
-					text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+					color: $goldColor;
 				}
-				&:hover {
-					a {
-						color: $goldColor;
-					}
-					.liner {
-						background-color: $goldColor;
-					}
+				.liner {
+					background-color: $goldColor;
 				}
 			}
 		}

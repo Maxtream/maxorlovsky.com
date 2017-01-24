@@ -20,24 +20,8 @@ $font-family-base: $font;
 // Loading bootstrap
 @import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 
-@mixin clear() {
-	content: ' ';
-	display: block;
-	clear: both;
-}
-
 a {
-    text-decoration: none;
-    color: $mainColor;
     transition: .5s;
-    outline: none;
-    border: 0;
-    &:hover {
-        color: #555;
-    }
-}
-.fright {
-    float:right;
 }
 
 body {
@@ -47,27 +31,14 @@ body {
     height: 100%;
     min-width: 320px;
     font-family: $font;
+    
     &.sidebar-open {
     	overflow: hidden;
     }
 }
 
-.hidden {
-    display: none;
-}
-
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
-}
-
-a {
-	color: $linkColor;
-	transition: .5s;
-	border-bottom: 1px dotted #000;
-	&:hover {
-		color: #000;
-	}
+	display: none;
 }
 
 @keyframes fadeIn {
@@ -84,6 +55,7 @@ a {
 	animation: fadeIn 0.5s both ease-in;
 	z-index: 8888;
 }
+
 .ng-leave {
 	display: none;
 }
