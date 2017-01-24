@@ -20,7 +20,7 @@ angular.module('app').controller('MainController', ['$scope', '$anchorScroll', f
 
 	$scope.gotoContent = function() {
 		$anchorScroll('container');
-	}
+	};
 
 	//Enable/disable night mood
 	hours = new Date().getHours();

@@ -1,10 +1,13 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
+const gulp = require('gulp');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 
 gulp.task('scripts', () => {
-    gulp.src('./fe/src/**/*.js')
-    	.pipe(uglify()),
-    	.pipe(contact('scripts.js'))
-        gulp.dest('./public/dist/assets/js/')
+    gulp.src([
+			'./fe/src/**/*.js',
+			'./fe/app/**/*.js'
+		])
+    	.pipe(uglify())
+    	.pipe(concat('scripts.js'))
+        .pipe(gulp.dest('./public/dist/js/'))
 });

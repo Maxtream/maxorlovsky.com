@@ -1,7 +1,7 @@
 <section class="work">
 	<p>Projects represented on this page are not my property. Few of them were build in a team of great developers and designers. Here I represent projects that I either built or was involved in building them. Please keep in mind that few projects might not be accessible either by access to them being blocked, they don't exist anymore or they were re-done completely.</p>
 	<a class="" ng-repeat="work in works" ng-href="{{ ::work.url }}" target="_blank">
-		<img ng-src="/assets/images/{{ ::work.image }}" />
+		<img ng-src="dist/assets/images/{{ ::work.image }}" />
 		<div class="name">{{ ::work.name }}</div>
 		<div class="description">{{ ::work.description }}</div>
 		<div class="icons">

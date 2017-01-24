@@ -1,16 +1,14 @@
-var gulp = require('gulp');
+const gulp = require('gulp');
+const runSequence = require('run-sequence');
 
 require('require-dir')('./tasks');
 
-gulp.task('default', () => {
-	
-});
+gulp.task('default', ['styles', 'scripts']);
 
-gulp.task('dev', () => {
-	return $.runSequence(
-		[
-	        "styles",
-	        "scripts"
-	        //"images"
-		]);
+gulp.task('dev', (cb) => {
+	runSequence(
+		'lint:script',
+		['styles', 'scripts'],
+		'watch',
+	cb);
 });
