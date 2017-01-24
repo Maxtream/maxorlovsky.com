@@ -1,0 +1,21 @@
+{
+    "name": "MaxOrlovsky",
+    "authors": [
+        {
+            "name": "Maxtream",
+            "email": "max.orlovsky@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^4.7.0"
+    },
+    "extra": {
+        "wordpress-install-dir": "./public/be"
+    }
+}

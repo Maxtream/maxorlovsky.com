@@ -1,6 +1,9 @@
 *.sublime-*
 *.log
 yarn.lock
+db.php
 
 node_modules
 public/dist/
+public/be/*
+vendor
