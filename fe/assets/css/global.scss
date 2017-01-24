@@ -84,3 +84,7 @@ a {
 .ng-leave {
 	display: none;
 }
+
+@import './mobile.scss';
+@import './tablet.scss';
+@import './pc.scss';
