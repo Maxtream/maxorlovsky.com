@@ -16,8 +16,20 @@ add_action( 'rest_api_init', function () {
 	register_rest_field( 'post',
         'image',
         array(
-            'get_callback'    => function( $object, $field_name, $request ) {
-            	return get_the_post_thumbnail( $object['id'], array(250, 130));
+            'get_callback'    => function($object) {
+            	return get_the_post_thumbnail($object['id'], array(250, 130));
+            },
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+
+	// Add meta to posts
+    register_rest_field('post',
+        'meta',
+        array(
+            'get_callback'    => function($object) {
+            	return get_post_meta($object['id']);
             },
             'update_callback' => null,
             'schema'          => null,
