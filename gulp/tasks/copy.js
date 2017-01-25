@@ -7,7 +7,7 @@ gulp.task('copy', function() {
     	.pipe(gulp.dest('./public/dist/assets/'));
 
     // Copy html files
-    gulp.src('./fe/app/views/*.html')
+    gulp.src('./fe/src/views/*.html')
     	.pipe(gulp.dest('./public/dist/html/'));
 
 	// Angular files
