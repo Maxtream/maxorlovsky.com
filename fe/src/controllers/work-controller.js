@@ -1,4 +1,4 @@
-angular.module('app').controller('WorkController', ['$scope', function ($scope) {
+/*angular.module('app').controller('WorkController', ['$scope', function ($scope) {
 	$scope.parentObject.currentPage = 'work';
 
 	$scope.works = [
@@ -377,4 +377,4 @@ angular.module('app').controller('WorkController', ['$scope', function ($scope) 
 			db: false
 		},
 	];
-}]);
+}]);*/

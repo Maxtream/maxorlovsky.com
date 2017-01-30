@@ -1,3 +1,3 @@
-angular.module('app').controller('AboutController', ['$scope', function ($scope) {
+/*angular.module('app').controller('AboutController', ['$scope', function ($scope) {
 	$scope.parentObject.currentPage = 'about';
-}]);
+}]);*/

@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
+/*angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		.when('/about', {
@@ -16,4 +16,4 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
 		.otherwise({ redirectTo: '/about' });
 
 	$locationProvider.html5Mode(true);
-}]);
+}]);*/

@@ -37,10 +37,6 @@ body {
     }
 }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none;
-}
-
 @keyframes fadeIn {
     from    { opacity: 0; }
     to 		{ opacity: 1; }

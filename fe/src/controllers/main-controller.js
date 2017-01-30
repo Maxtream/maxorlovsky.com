@@ -1,4 +1,4 @@
-angular.module('app').controller('MainController', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
+/*angular.module('app').controller('MainController', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
 	$scope.links = [
 		{url: 'about', value: 'About'},
 		{url: 'work', value: 'Work'},
@@ -34,4 +34,4 @@ angular.module('app').controller('MainController', ['$scope', '$anchorScroll', f
 		// BG is dark, so night always required
 		$scope.parentObject.night = true;
 	}
-}]);
+}]);*/

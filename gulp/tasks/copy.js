@@ -10,11 +10,11 @@ gulp.task('copy', function() {
     gulp.src('./fe/app/views/*.html')
     	.pipe(gulp.dest('./public/dist/html/'));
 
-	// Angular files
+	// React files
 	gulp.src([
-			'./node_modules/angular/angular.min.js',
-			'./node_modules/angular-*/angular-*.min.js'
+			'./node_modules/react/dist/react.min.js',
+			'./node_modules/react-*/dist/react-*.min.js'
 		])
-    	.pipe(concat('angular.js'))
+    	.pipe(concat('react.js'))
         .pipe(gulp.dest('./public/dist/js/'));
 });
