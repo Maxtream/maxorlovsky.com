@@ -12,8 +12,8 @@ gulp.task('copy', function() {
 
 	// React files
 	gulp.src([
-			'./node_modules/react/dist/react.min.js',
-			'./node_modules/react-*/dist/react-*.min.js'
+			'./node_modules/react/dist/react.js',
+			'./node_modules/react-*/dist/react-*.js'
 		])
     	.pipe(concat('react.js'))
         .pipe(gulp.dest('./public/dist/js/'));

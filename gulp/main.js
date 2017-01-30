@@ -3,11 +3,12 @@ const runSequence = require('run-sequence');
 
 require('require-dir')('./tasks');
 
-gulp.task('default', ['styles', 'scripts', 'copy']);
+gulp.task('default', ['copy', 'styles', 'scripts']);
 
 gulp.task('dev', (cb) => {
 	runSequence(
 		'lint:script',
-		['styles', 'scripts', 'copy'],
+		'copy',
+		['styles', 'scripts'],
 	cb);
 });
