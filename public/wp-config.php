@@ -39,8 +39,8 @@ define('DB_CHARSET', 'utf8mb4');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-define('WP_CONTENT_DIR', dirname(__FILE__) . '/public/wp-content' );
-define('WP_CONTENT_URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/be/wp-content');
+define('WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content' );
+define('WP_CONTENT_URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/wp-content');
 
 //define('WP_PLUGIN_DIR', dirname(__FILE__) . '/public/wp-plugins' );
 //define('WP_PLUGIN_URL', $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/be/wp-plugins');

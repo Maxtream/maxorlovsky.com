@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 
 gulp.task('watch', ['serve'], () => {
-	gulp.watch('./fe/app/**/*.js', ['lint:script', 'scripts', browserSync.reload])
+	gulp.watch('./fe/src/**/*.js', ['lint:script', 'scripts', browserSync.reload])
 		.on("change", watchChange)
 		.on("error", watchError);
 
