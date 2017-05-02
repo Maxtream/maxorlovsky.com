@@ -3,7 +3,7 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
 gulp.task('scripts', () => {
-    gulp.src([
+    return gulp.src([
 			'./fe/src/**/*.js'
 		])
     	.pipe(uglify())
