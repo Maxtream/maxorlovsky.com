@@ -5,9 +5,24 @@
     <style>
         .lv-holidays {
             background-color: #090;
+            color: #fff;
         }
         .malta-holidays {
             background-color: #900;
+        }
+        .moon-days {
+            background-color: #ddd;
+            color: #222;
+        }
+        .fc-day-grid-event {
+            font-size: 1.1rem;
+        }
+        .fc-day-grid-event .fc-content {
+            white-space: initial;
+        }
+        .fc-sat,
+        .fc-sun {
+            background-color: #f8f8f8;
         }
     </style>
 </head>
@@ -22,6 +37,7 @@
     <script src="../../node_modules/fullcalendar/dist/fullcalendar.min.js"></script>
     <script src="../../node_modules/fullcalendar/dist/gcal.min.js"></script>
     <script>
+    let events = [];
     $(document).ready(function() {
 
         // page is now ready, initialize the calendar...
@@ -36,6 +52,10 @@
             firstDay: 1,
             eventSources: [
                 {
+                    googleCalendarId: 'ht3jlfaac5lfd6263ulfh4tql8@group.calendar.google.com',
+                    className: 'moon-days'
+                },
+                {
                     googleCalendarId: 'max.orlovsky@gmail.com',
                     className: 'orlovsky'
                 },
@@ -46,23 +66,11 @@
                 {
                     googleCalendarId: 'en.mt#holiday@group.v.calendar.google.com',
                     className: 'malta-holidays'
-                },
-                {
-                    googleCalendarId: 'ht3jlfaac5lfd6263ulfh4tql8@group.calendar.google.com',
-                    className: 'moon-days'
                 }
             ],
             fixedWeekCount: false,
-            events: [
-                {
-                    title: 'test',
-                    start: '2017-05-01',
-                    end: '2017-05-03',
-                    className: 'wunder'
-                }
-            ]
+            events: events
         })
-
     });
     </script>
 </body>
