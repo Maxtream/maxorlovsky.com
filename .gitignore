@@ -7,3 +7,5 @@ node_modules
 public/dist/
 public/be/*
 vendor
+
+public/wallc/access.php

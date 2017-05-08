@@ -1,12 +1,11 @@
 {
-  "name": "MaxOrlovsky",
-  "title": "MaxOrlovsky",
+  "name": "maxorlovsky.com",
   "description": "Max Orlovsky website",
   "license": "unlicensed",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Maxtream/maxorlovsky.net.git"
+    "url": "https://github.com/Maxtream/maxorlovsky.com.git"
   },
   "version": "1.3.0",
   "devDependencies": {
@@ -30,6 +29,7 @@
     "angular-animate": "~1.6.1",
     "angular-route": "~1.6.1",
     "angular-touch": "~1.6.1",
-    "bootstrap": "~4.0.0-alpha.6"
+    "bootstrap": "~4.0.0-alpha.6",
+    "fullcalendar": "^3.4.0"
   }
 }

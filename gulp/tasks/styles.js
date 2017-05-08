@@ -3,7 +3,7 @@ const sass = require('gulp-sass');
 const uglifycss = require('gulp-uglifycss');
 
 gulp.task('styles', () => {
-    gulp.src('./fe/styles/global.scss')
+    return gulp.src('./fe/styles/global.scss')
     	.pipe(sass().on('error', sass.logError))
     	.pipe(uglifycss({
 			"uglyComments": true
