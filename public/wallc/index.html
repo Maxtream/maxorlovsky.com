@@ -1,80 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Wall Calendar</title>
     <link rel="stylesheet" href="styles.css" async />
-    <style>
-        .lv-holidays {
-            background-color: #090;
-            color: #fff;
-        }
-        .malta-holidays {
-            background-color: #900;
-        }
-        .moon-days {
-            background-color: #ddd;
-            color: #222;
-        }
-        .fc-day-grid-event {
-            font-size: 1.1rem;
-        }
-        .fc-day-grid-event .fc-content {
-            white-space: initial;
-        }
-        .fc-sat,
-        .fc-sun {
-            background-color: #f8f8f8;
-        }
-    </style>
+    <link rel="stylesheet" href="wallc.css" async />
 </head>
 
 <body>
 
-    <section class="calendar" id="calendar">
-    </section>
+    <section class="calendar" id="calendar"></section>
+
+    <div id="status"></div>
+    <div id="final_span"></div>
+    <div id="interim_span"></div>
 
     <script src="scripts.js"></script>
-
-    <script>
-    let events = [];
-    $(document).ready(function() {
-
-        // page is now ready, initialize the calendar...
-
-        $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyD9-k50LdAnOJxGcJpjji-gkRkX9BmYoAE',
-            header: {
-				left: 'prev next',
-				center: 'title',
-				right: 'month,agendaWeek'
-			},
-            firstDay: 1,
-            timeFormat: 'H:mm',
-            eventSources: [
-                {
-                    googleCalendarId: 'ht3jlfaac5lfd6263ulfh4tql8@group.calendar.google.com',
-                    className: 'moon-days'
-                },
-                {
-                    googleCalendarId: 'max.orlovsky@gmail.com',
-                    className: 'orlovsky'
-                },
-                {
-                    googleCalendarId: 'anya.orlovsky@gmail.com',
-                    className: 'orlovsky'
-                },
-                {
-                    googleCalendarId: 'en.latvian#holiday@group.v.calendar.google.com',
-                    className: 'lv-holidays'
-                },
-                {
-                    googleCalendarId: 'en.mt#holiday@group.v.calendar.google.com',
-                    className: 'malta-holidays'
-                }
-            ],
-            fixedWeekCount: false,
-            events: events
-        })
-    });
-    </script>
+    <script src="wallc.js"></script>
 </body>
 </html>
