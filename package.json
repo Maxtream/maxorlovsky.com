@@ -17,6 +17,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-uglifycss": "^1.0.6",
     "jshint": "^2.9.4",
+    "node-fetch": "^1.6.3",
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2"
   },
