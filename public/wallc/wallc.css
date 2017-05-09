@@ -1,0 +1,27 @@
+.lv-holidays {
+    background-color: #090;
+    color: #fff;
+}
+.malta-holidays {
+    background-color: #900;
+}
+.moon-days {
+    background-color: #ddd;
+    color: #222;
+}
+.fc-day-grid-event {
+    font-size: 1.1rem;
+}
+.fc-day-grid-event .fc-content {
+    white-space: initial;
+}
+.fc-sat,
+.fc-sun {
+    background-color: #f8f8f8;
+}
+.aorlovsky {
+    background-color: #C28AF9;
+}
+.morlovsky {
+    background-color: #4E63CA;
+}

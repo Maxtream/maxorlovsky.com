@@ -10,6 +10,12 @@ const vars = {
     }
 }
 
+for (calendar of calendars) {
+    checkCalendar(calendar);
+}
+
+console.log(vars);
+
 setInterval(() => {
     for (calendar of calendars) {
         checkCalendar(calendar);
@@ -26,7 +32,8 @@ function checkCalendar(calendarId) {
     .then(function(json) {
         if (vars.calendarsUpdate[calendarId] === 0) {
             vars.calendarsUpdate[calendarId] = json.updated;
+        } else if (vars.calendarsUpdate[calendarId] !== json.updated) {
+            
         }
-        //else if ()
     });
 }

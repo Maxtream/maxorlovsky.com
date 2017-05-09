@@ -1,36 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Wall Calendar</title>
     <link rel="stylesheet" href="styles.css" async />
-    <style>
-        .lv-holidays {
-            background-color: #090;
-            color: #fff;
-        }
-        .malta-holidays {
-            background-color: #900;
-        }
-        .moon-days {
-            background-color: #ddd;
-            color: #222;
-        }
-        .fc-day-grid-event {
-            font-size: 1.1rem;
-        }
-        .fc-day-grid-event .fc-content {
-            white-space: initial;
-        }
-        .fc-sat,
-        .fc-sun {
-            background-color: #f8f8f8;
-        }
-        .aorlovsky {
-            background-color: #C28AF9;
-        }
-        .morlovsky {
-            background-color: #4E63CA;
-        }
-    </style>
+    <link rel="stylesheet" href="wallc.css" async />
 </head>
 
 <body>
@@ -42,104 +15,6 @@
     <div id="interim_span"></div>
 
     <script src="scripts.js"></script>
-
-    <script>
-    let events = [];
-
-    $('#calendar').fullCalendar({
-        googleCalendarApiKey: 'AIzaSyD9-k50LdAnOJxGcJpjji-gkRkX9BmYoAE',
-        header: {
-            left: 'prev next',
-            center: 'title',
-            right: 'month,agendaWeek'
-        },
-        contentHeight: 'auto',
-        firstDay: 1,
-        timeFormat: 'H:mm',
-        eventSources: [
-            {
-                googleCalendarId: 'ht3jlfaac5lfd6263ulfh4tql8@group.calendar.google.com',
-                className: 'moon-days'
-            },
-            {
-                googleCalendarId: 'max.orlovsky@gmail.com',
-                className: 'morlovsky'
-            },
-            {
-                googleCalendarId: 'anya.orlovsky@gmail.com',
-                className: 'aorlovsky'
-            },
-            {
-                googleCalendarId: 'en.latvian#holiday@group.v.calendar.google.com',
-                className: 'lv-holidays'
-            },
-            {
-                googleCalendarId: 'en.mt#holiday@group.v.calendar.google.com',
-                className: 'malta-holidays'
-            }
-        ],
-        fixedWeekCount: false,
-        events: events
-    });
-
-    //$('#calendar').fullCalendar('rerenderEvents');
-
-    var msg = new SpeechSynthesisUtterance();
-    var voices = window.speechSynthesis.getVoices();
-    console.log(voices);
-    msg.voice = voices[10];
-    msg.voiceURI = 'native';
-    msg.volume = 1; // 0 to 1
-    msg.rate = 0.7; // 0.1 to 10
-    msg.pitch = 1.1; //0 to 2
-    msg.lang = 'en-US';
-    msg.onend = function(e) {
-        console.log('Phrase ended');
-    };
-
-    sayText('Reminder from Anya calendar: Driving lessons at 3pm');
-
-    function sayText(message) {
-        msg.text = message;
-        speechSynthesis.speak(msg);
-    }
-    
-    
-    var recognition = new webkitSpeechRecognition();
-    recognition.continuous = true;
-    recognition.interimResults = false;
-    recognition.lang = 'en_US';
-
-    //recognition.start();
-
-    recognition.onstart = function () {
-        $("#status").html("Recording");
-        recognizing = true;
-    };
-
-    recognition.onerror = function (event) {
-        $("#status").html("Error");
-    };
-
-    recognition.onend = function() {
-        $("#status").html("Ended");
-        recognizing = false;
-    };
-
-    recognition.onresult = function(event) {
-        var final_transcript = '';
-        var interim_transcript = '';
-        for (var i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-                final_transcript += event.results[i][0].transcript.toLowerCase();
-            } else {
-                //event.results[i][0].transcript;
-            }
-        }
-
-        $("#final_span").html(final_transcript);
-        $("#interim_span").html(interim_transcript);
-    };
-    </script>
+    <script src="wallc.js"></script>
 </body>
 </html>
