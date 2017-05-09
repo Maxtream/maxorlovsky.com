@@ -59,7 +59,7 @@ recognition.continuous = true;
 recognition.interimResults = false;
 recognition.lang = 'en_US';
 
-recognition.start();
+//recognition.start();
 
 recognition.onstart = function () {
     $("#status").html("Recording");
@@ -121,7 +121,7 @@ setInterval(() => {
     }
 
     //console.log(vars);
-}, 15000);
+}, 30000);
 
 function checkCalendar(calendarId) {
     fetch('https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + key)
@@ -159,7 +159,7 @@ setInterval(() => {
             }
         }
     }
-}, 5000);
+}, 30000);
 
 function getName(calendarId) {
     if (calendarId.indexOf('anya') === -1) {
