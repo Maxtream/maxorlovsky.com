@@ -1,12 +1,13 @@
 const gulp = require('gulp');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const gwebpack = require('gulp-webpack');
+const webpack = require('webpack');
 
 gulp.task('scripts', () => {
-    return gulp.src([
-			'./fe/src/**/*.js'
-		])
-    	.pipe(uglify())
-    	.pipe(concat('scripts.js'))
+	const webpackConfig = require('../../webpack.config.js');
+
+    return gulp.src('./fe/src/app.js')
+    	.pipe(gwebpack(webpackConfig, webpack))
         .pipe(gulp.dest('./public/dist/js/'));
 });

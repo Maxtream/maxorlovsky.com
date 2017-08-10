@@ -1,7 +1,9 @@
+import * as angular from 'angular';
+
 angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
-		.when('/about', {
+		.when('/', {
 			templateUrl: 'dist/html/about.html',
 			controller: 'AboutController'
 		})
@@ -13,7 +15,7 @@ angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
 			templateUrl: 'dist/html/pet-projects.html',
 			controller: 'PetProjectsController'
 		})
-		.otherwise({ redirectTo: '/about' });
+		.otherwise({ redirectTo: '/' });
 
 	$locationProvider.html5Mode(true);
 }]);
