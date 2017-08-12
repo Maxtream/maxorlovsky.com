@@ -121,8 +121,14 @@ header {
 	&.night {
 		background-image: url($img+'/bg-night.jpg');
 
-		.info h1 span {
-			color: $goldColor; 
+		.info {
+			h1 span {
+				color: $goldColor; 
+			}
+			
+			svg:hover {
+				fill: #ffd700;
+			}
 		}
 
 		nav .burger svg {
