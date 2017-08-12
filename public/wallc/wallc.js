@@ -89,10 +89,10 @@ recognition.onresult = function(event) {
     $("#interim_span").html(interim_transcript);
 };
 
-const key = 'AIzaSyD9-k50LdAnOJxGcJpjji-gkRkX9BmYoAE';
-const secret = 'test';
-const calendars = ['max.orlovsky@gmail.com', 'anya.orlovsky@gmail.com'];
-const vars = {
+var key = 'AIzaSyD9-k50LdAnOJxGcJpjji-gkRkX9BmYoAE';
+var secret = 'test';
+var calendars = ['max.orlovsky@gmail.com', 'anya.orlovsky@gmail.com'];
+var vars = {
     "max.orlovsky@gmail.com": {
         updateTime: 0,
         items: {},
@@ -115,14 +115,6 @@ for (calendar of calendars) {
     checkCalendar(calendar);
 }
 
-setInterval(() => {
-    for (calendar of calendars) {
-        checkCalendar(calendar);
-    }
-
-    //console.log(vars);
-}, 30000);
-
 function checkCalendar(calendarId) {
     fetch('https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + key)
     .then(function(response) {
@@ -142,22 +134,42 @@ function checkCalendar(calendarId) {
     });
 }
 
-setInterval(() => {
-    var dateNow = new Date().getTime();
+var dayCheck = null;
+
+setInterval(function() {
+    var dateNow = new Date();
+    var currentTimestamp = dateNow.getTime();
+    var currentDay = dateNow.getDay();
+
+    // If new day, reload page
+    if (dayCheck === null) {
+        // If day we're checking is null, save it up
+        dayCheck = currentDay;
+    } else if (dayCheck !== currentDay) {
+        // If day changed, reload
+        location.reload();
+    }
+
     for (calendarId of calendars) {
         for (item of vars[calendarId].items) {
-            var itemDate = new Date(item.start.dateTime);
-            if (itemDate.getTime() > dateNow) {
-                if ((itemDate.getTime() - 900000) < dateNow && vars[calendarId].notified.fifteen.indexOf(item.id) === -1) {
-                    sayText('Reminder from ' + getName(calendarId) + ' calendar: ' + item.summary + ' at ' + itemDate.getHours() + ':' + itemDate.getMinutes());
-                    vars[calendarId].notified.fifteen.push(item.id);
-                    vars[calendarId].notified.thirty.push(item.id);
-                } else if ((itemDate.getTime() - 1800000) < dateNow && vars[calendarId].notified.thirty.indexOf(item.id) === -1) {
-                    sayText('Reminder from ' + getName(calendarId) + ' calendar: ' + item.summary + ' at ' + itemDate.getHours() + ':' + itemDate.getMinutes());
-                    vars[calendarId].notified.thirty.push(item.id);
+            if (item.status != 'canceled' && item.start) {
+                var itemDate = new Date(item.start.dateTime);
+                if (itemDate.getTime() > currentTimestamp) {
+                    if ((itemDate.getTime() - 900000) < currentTimestamp && vars[calendarId].notified.fifteen.indexOf(item.id) === -1) {
+                        sayText('Reminder from ' + getName(calendarId) + ' calendar: ' + item.summary + ' at ' + itemDate.getHours() + ':' + itemDate.getMinutes());
+                        vars[calendarId].notified.fifteen.push(item.id);
+                        vars[calendarId].notified.thirty.push(item.id);
+                    } else if ((itemDate.getTime() - 1800000) < currentTimestamp && vars[calendarId].notified.thirty.indexOf(item.id) === -1) {
+                        sayText('Reminder from ' + getName(calendarId) + ' calendar: ' + item.summary + ' at ' + itemDate.getHours() + ':' + itemDate.getMinutes());
+                        vars[calendarId].notified.thirty.push(item.id);
+                    }
                 }
             }
         }
+    }
+
+    for (calendar of calendars) {
+        checkCalendar(calendar);
     }
 }, 30000);
 
