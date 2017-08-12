@@ -1,3 +1,5 @@
-angular.module('app').controller('AboutController', ['$scope', function ($scope) {
-	$scope.parentObject.currentPage = 'about';
-}]);
+AboutController.$inject = ['$scope'];
+
+export function AboutController($scope) {
+    $scope.parentObject.currentPage = 'about';
+}

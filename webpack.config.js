@@ -3,12 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        bundle: [
-            './fe/src/app.js',
-            './fe/src/controllers/main-controller.js',
-            './fe/src/controllers/about-controller.js',
-            './fe/src/controllers/work-controller.js'
-        ],
+        bundle: ['./fe/src/app.js'],
         vendors: [
 			"angular",
 			"angular-animate",

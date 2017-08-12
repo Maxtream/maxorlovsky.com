@@ -1,7 +1,7 @@
-import { module } from 'angular';
+MainController.$inject = ['$scope', '$anchorScroll'];
 
-angular.module('app').controller('MainController', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
-	$scope.links = [
+export function MainController($scope, $anchorScroll) {
+    $scope.links = [
 		{url: 'about', value: 'About'},
 		{url: 'work', value: 'Work'},
 		//{url: 'pet-projects', value: 'Pet projects'},
@@ -36,4 +36,4 @@ angular.module('app').controller('MainController', ['$scope', '$anchorScroll', f
 		// BG is dark, so night always required
 		$scope.parentObject.night = true;
 	}
-}]);
+}
