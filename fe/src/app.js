@@ -1,19 +1,20 @@
-angular.module('app', ['ngRoute', 'ngAnimate', 'ngTouch'])
-.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-	$routeProvider
-		.when('/about', {
-			templateUrl: 'dist/html/about.html',
-			controller: 'AboutController'
-		})
-		.when('/work', {
-			templateUrl: 'dist/html/work.html',
-			controller: 'WorkController'
-		})
-		.when('/pet-projects', {
-			templateUrl: 'dist/html/pet-projects.html',
-			controller: 'PetProjectsController'
-		})
-		.otherwise({ redirectTo: '/about' });
+// Angular
+import * as angular from 'angular';
 
-	$locationProvider.html5Mode(true);
-}]);
+// Config
+import { routing } from './config';
+
+// Controllers
+import { MainController } from './controllers/main-controller';
+import { AboutController } from './controllers/about-controller';
+import { WorkController } from './controllers/work-controller';
+
+angular.module('app', [
+	'ngRoute',
+	'ngAnimate',
+	'ngTouch'
+])
+.config(routing)
+.controller('MainController', MainController)
+.controller('AboutController', AboutController)
+.controller('WorkController', WorkController);

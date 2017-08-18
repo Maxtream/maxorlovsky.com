@@ -1,6 +1,5 @@
 *.sublime-*
 *.log
-yarn.lock
 db.php
 
 node_modules
