@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "johnpbloch/wordpress": "^4.7.0"
+        "johnpbloch/wordpress": "^4.8.0",
+        "roots/wp-password-bcrypt": "^1.0.0"
     },
     "extra": {
         "wordpress-install-dir": "./public/be"
