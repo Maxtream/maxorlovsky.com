@@ -5,6 +5,7 @@ db.php
 node_modules
 public/dist/
 public/be/*
+public/index.html
 vendor
 
 public/wallc/access.php
