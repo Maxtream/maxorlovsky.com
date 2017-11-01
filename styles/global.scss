@@ -18,7 +18,7 @@ $link-hover-color: #555;
 $font-family-base: $font;
 
 // Loading bootstrap
-@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 
 a {
     transition: .5s;
