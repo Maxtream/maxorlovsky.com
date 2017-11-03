@@ -8,28 +8,42 @@
     "url": "https://github.com/Maxtream/maxorlovsky.com.git"
   },
   "scripts": {
-    "build": "gulp build"
+    "start": "node_modules/.bin/webpack-dev-server --inline --progress --port 8080",
+    "build": "gulp build",
+    "lint": "tslint -c config/tslint.json \"fe/src/app/**/*.ts\"",
+    "webpack": "node_modules/.bin/webpack --config config/webpack.config.dev.js"
   },
   "version": "2.0.0",
   "devDependencies": {
-    "browser-sync": "2.18.13",
-    "gulp": "3.9.1",
-    "gulp-concat": "2.6.1",
-    "gulp-jshint": "2.0.4",
-    "gulp-sass": "3.1.0",
-    "gulp-uglify": "3.0.0",
-    "gulp-uglifycss": "1.0.8",
-    "gulp-webpack": "1.5.0",
-    "jshint": "2.9.5",
-    "require-dir": "0.3.2",
-    "run-sequence": "2.2.0",
-    "webpack": "3.8.1"
+    "@angular/animations": "^4.4.6",
+    "@angular/common": "^4.4.6",
+    "@angular/compiler": "^4.4.6",
+    "@angular/core": "^4.4.6",
+    "@angular/http": "^5.0.0",
+    "@angular/platform-browser": "^4.4.6",
+    "@angular/platform-browser-dynamic": "^4.4.6",
+    "@angular/router": "^4.4.6",
+    "@types/node": "^8.0.47",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.3.0",
+    "bootstrap": "4.0.0-beta",
+    "core-js": "^2.5.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "rimraf": "^2.6.2",
+    "rxjs": "^5.5.2",
+    "sass-loader": "^6.0.6",
+    "to-string-loader": "^1.1.5",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.0",
+    "zone.js": "^0.8.18"
   },
-  "dependencies": {
-    "angular": "1.6.6",
-    "angular-animate": "1.6.6",
-    "angular-route": "1.6.6",
-    "angular-touch": "1.6.6",
-    "bootstrap": "4.0.0-beta"
-  }
+  "dependencies": {}
 }

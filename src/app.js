@@ -1,4 +1,4 @@
-// Angular
+/* // Angular
 import * as angular from 'angular';
 
 // Config
@@ -17,4 +17,4 @@ angular.module('app', [
 .config(routing)
 .controller('MainController', MainController)
 .controller('AboutController', AboutController)
-.controller('WorkController', WorkController);
+.controller('WorkController', WorkController); */

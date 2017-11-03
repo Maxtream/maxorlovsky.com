@@ -1,4 +1,6 @@
-// Main custom variables
+/**
+ * Main custom variables
+ */
 $mainColor: #000;
 $linkColor: #e79809;
 $alternativeColor: #fff;
@@ -37,10 +39,6 @@ body {
     }
 }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none;
-}
-
 @keyframes fadeIn {
     from    { opacity: 0; }
     to 		{ opacity: 1; }
@@ -60,7 +58,7 @@ body {
 	display: none;
 }
 
-// Adding screen/size specific files
-@import './mobile.scss';
-@import './tablet.scss';
-@import './pc.scss';
+// Import components scss
+@import '../src/app/app.scss';
+@import '../src/app/components/sidebar/sidebar.scss';
+@import '../src/app/pages/home/home.scss';

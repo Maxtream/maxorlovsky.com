@@ -1,4 +1,4 @@
-routing.$inject = ['$routeProvider', '$locationProvider'];
+/* routing.$inject = ['$routeProvider', '$locationProvider'];
 
 export function routing($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
@@ -12,4 +12,4 @@ export function routing($routeProvider, $locationProvider) {
         controller: 'WorkController'
     })
     .otherwise({ redirectTo: '/' });
-}
+} */
