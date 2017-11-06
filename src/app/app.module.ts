@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideBarComponent } from './components/sidebar/sidebar.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { SideBarComponent } from './components/sidebar/sidebar.component';
         WorkPage,
         HeaderComponent,
         FooterComponent,
-        SideBarComponent
+        SideBarComponent,
+        LoadingComponent
     ],
     bootstrap: [
         AppComponent
