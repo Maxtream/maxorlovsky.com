@@ -8,7 +8,6 @@ export class HeaderComponent {
     @Input() links: Array<any>;
 
     public night: boolean = false;
-    public currentPage: string = '';
     public mood: string = '';
 
     public constructor() {

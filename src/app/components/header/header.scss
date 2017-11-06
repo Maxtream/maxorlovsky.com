@@ -5,7 +5,11 @@
 	position: relative;
 
 	.info {
-		padding: 75px 0;
+		padding: 2rem 0;
+
+		@media (min-width: $breakPointPC) {
+			padding: 7rem 0;
+		}
 
 		.photo {
 			width: 100px;
@@ -67,16 +71,17 @@
                 display: block;
             }
 
-			a {
+			p {
 				font-size: 32px;
 				font-family: $font;
                 white-space: nowrap;
                 
                 @media (min-width: $breakPointPC) {
-                    font-size: 37px;
+                    font-size: 3rem;
                     color: #000;
                     border-bottom: 0;
-                    text-shadow: 1px 2px 1px rgba(255, 255, 255, 1);
+					text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+					font-weight: bold;
                 }
 			}
 
@@ -92,7 +97,7 @@
 			}
 
 			&:hover {
-				a {
+				p {
 					color: $alternativeColor;
 				}
 				.liner {
@@ -135,13 +140,14 @@
 
             @media (min-width: $breakPointPC) {
                 .link-wrapper {
-                    a {
+                    p {
                         color: #fff;
-                        text-shadow: 1px 2px 1px rgba(0, 0, 0, 1);
+						text-shadow: 1px 2px 1px $goldColor;
+						font-weight: normal;
                     }
         
                     &:hover {
-                        a {
+                        p {
                             color: $goldColor;
                         }
                         .liner {

@@ -5,7 +5,8 @@
         <a *ngFor="let link of links"
         (click)="closeSideBar()"
         [routerLink]="link.url"
-        [ngClass]="{'active': currentPage === link.url}"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
         >
             {{link.value}}
         </a>

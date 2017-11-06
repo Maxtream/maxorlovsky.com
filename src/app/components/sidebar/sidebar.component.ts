@@ -8,7 +8,6 @@ export class SideBarComponent {
     @Input() links: Array<any>;
 
     public sidebarOpen: boolean = false;
-    public currentPage: string = '';
 
     public closeSideBar() {
         this.sidebarOpen = false;

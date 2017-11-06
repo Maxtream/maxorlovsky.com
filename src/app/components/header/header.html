@@ -1,12 +1,14 @@
 <header [ngClass]="{'night': night}" class="header {{mood}}">
     <nav>
-        <div *ngFor="let link of links"
-            [ngClass]="{'active': currentPage == link.url}"
+        <a *ngFor="let link of links"
+            [routerLinkActive]="'active'"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [routerLink]="link.url"
             class="link-wrapper"
         >
-            <a [routerLink]="link.url">{{link.value}}</a>
+            <p>{{link.value}}</p>
             <div class="liner"></div>
-        </div>
+        </a>
     </nav>
 
     <div *ngIf="mood == 'winter'">
