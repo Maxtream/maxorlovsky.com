@@ -1,0 +1,76 @@
+.work {
+	margin: 30px 5%;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap;
+	align-items: center;
+
+	@include clearfix;
+
+	p {
+		margin-bottom: 20px;
+		font-family: $fontContent;
+	}
+
+	> a {
+		
+		margin: 0 1% 10px 1%;
+		
+		position: relative;
+		border: 1px solid #000;
+		width: 250px;
+		height: 215px;
+		overflow: hidden;
+
+		img {
+			width: 250px;
+			height: 130px;
+			display: block;
+		}
+
+		.name {
+			border-top: 1px solid #000;
+			padding: 10px 0;
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		.description {
+			position: absolute;
+			top: 220px;
+			height: 220px;
+			left: 0;
+			transition: .5s;
+			background-color: rgba(0,0,0,0.7);
+			width: 100%;
+			visibility: hidden;
+			padding: 10px;
+			box-sizing: border-box;
+			color: #fff;
+		}
+
+		&:hover {
+			color: #000;
+			cursor: pointer;
+
+			.description {
+				top: 0;
+				color: #fff;
+				visibility: visible;
+				transition: .5s;
+			}
+		}
+
+		.icons {
+			display: flex;
+			justify-content: space-around;
+			flex-flow: row wrap;
+
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}	
+}
