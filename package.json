@@ -5,13 +5,14 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Maxtream/maxorlovsky.com.git"
+    "url": "https://github.com/maxorlovsky/maxorlovsky.com.git"
   },
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --inline --progress --port 8080",
-    "build": "gulp build",
+    "build": "node_modules/.bin/webpack --config config/webpack.config.dev.js",
     "lint": "tslint -c config/tslint.json \"fe/src/app/**/*.ts\"",
-    "webpack": "node_modules/.bin/webpack --config config/webpack.config.dev.js"
+    "webpack": "node_modules/.bin/webpack --config config/webpack.config.dev.js",
+    "release": "node node_modules/rimraf/bin.js public/dist && node_modules/.bin/webpack --config config/webpack.config.prod.js"
   },
   "version": "2.0.0",
   "devDependencies": {
