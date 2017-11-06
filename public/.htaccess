@@ -1,6 +1,8 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^robots.txt - [L]
+
 <IfModule mod_rewrite.c>
     <IfModule mod_proxy_http.c>
         RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator|SemrushBot|SemrushBot-SA [NC,OR]
