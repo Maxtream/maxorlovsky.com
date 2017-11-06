@@ -4,8 +4,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppRouting } from './app.routing';
 
+import { HomePage } from './pages/home/home.component';
+import { WorkPage } from './pages/work/work.component';
+
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
@@ -16,7 +19,9 @@ import { SideBarComponent } from './components/sidebar/sidebar.component';
     ],
     declarations: [
         AppComponent,
-        HomeComponent,
+        HomePage,
+        WorkPage,
+        HeaderComponent,
         SideBarComponent
     ],
     bootstrap: [
