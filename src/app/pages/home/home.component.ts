@@ -4,6 +4,6 @@ import { Component } from "@angular/core";
     selector: "max-home",
     templateUrl: './home.html'
 })
-export class HomeComponent {
+export class HomePage {
     
 }
