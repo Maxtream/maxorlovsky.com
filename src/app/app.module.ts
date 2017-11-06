@@ -9,6 +9,7 @@ import { WorkPage } from './pages/work/work.component';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { SideBarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SideBarComponent } from './components/sidebar/sidebar.component';
         HomePage,
         WorkPage,
         HeaderComponent,
+        FooterComponent,
         SideBarComponent
     ],
     bootstrap: [

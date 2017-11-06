@@ -7,11 +7,9 @@ import { Component, OnInit } from "@angular/core";
 export class AppComponent implements OnInit {
 
     public links: Array<any>;
-    public year: number;
     
     public constructor() {
         this.links = this.fillInLinks();
-        this.year = new Date().getFullYear();
     }
     
     public ngOnInit(): void {}
@@ -23,8 +21,7 @@ export class AppComponent implements OnInit {
     private fillInLinks(): Array<any> {
         return [
             {url: '', value: 'About'},
-            {url: 'work', value: 'Work'},
-            //{url: 'pet-projects', value: 'Pet projects'},
+            {url: 'work', value: 'Work'}
         ];    
     }
 }
