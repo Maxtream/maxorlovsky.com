@@ -1,8 +1,0 @@
-<nav>
-	<a ng-repeat="link in links"
-	ng-class="{'active': parentObject.currentPage == link.url}"
-	ng-href="{{ ::link.url }}"
-	ng-click="parentObject.sidebar = 0; gotoContent()">
-	    {{ ::link.value }}
-	</a>
-</nav>

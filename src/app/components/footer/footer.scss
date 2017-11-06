@@ -1,0 +1,18 @@
+.footer {
+	border-top: 1px solid #111;
+	width: 90%;
+	margin: 20px auto 0 auto;
+	text-align: center;
+
+	@media (min-width: $breakPointTablet) {
+		width: 80%;
+	}
+
+	@media (min-width: $breakPointPC) {
+		width: 70%;
+	}
+
+	p {
+		margin: 30px 0;
+	}
+}

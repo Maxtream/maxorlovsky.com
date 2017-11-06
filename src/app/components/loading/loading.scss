@@ -1,0 +1,8 @@
+.loading {
+    width: 100%;
+    min-height: 120px;
+    background-image: url($img+'/loading.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 0;
+}
