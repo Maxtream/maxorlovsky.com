@@ -39,25 +39,6 @@ body {
     }
 }
 
-@keyframes fadeIn {
-    from    { opacity: 0; }
-    to 		{ opacity: 1; }
-}
-
-@keyframes fadeOut {
-    from    { opacity: 1; }
-    to 		{ opacity: 0; }
-}
-
-.ng-enter {
-	animation: fadeIn 0.5s both ease-in;
-	z-index: 8888;
-}
-
-.ng-leave {
-	display: none;
-}
-
 .container {
 	z-index: 6;
 	transition: .5s;
@@ -68,7 +49,6 @@ body {
 }
 
 // Import components scss
-@import '../src/app/app.scss';
 @import '../src/app/components/header/header.scss';
 @import '../src/app/components/footer/footer.scss';
 @import '../src/app/components/sidebar/sidebar.scss';
