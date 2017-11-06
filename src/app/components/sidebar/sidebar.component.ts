@@ -12,6 +12,7 @@ export class SideBarComponent {
     public closeSideBar() {
         this.sidebarOpen = false;
         this.setBodyClass();
+        document.querySelector('#container').scrollIntoView(true);
     }
 
     public toggleSideBar() {
