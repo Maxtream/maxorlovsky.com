@@ -10,6 +10,28 @@ export class WorkPage {
     public constructor() {
         this.works = [
             {
+                name: 'Driving Theory Malta',
+                description: 'This is a free webapp I\'ve built for my wife to help study Maltese driving theory and afterwards made it public for purposes to provide free education and test example for people studying Malta Driving Theory.',
+                image: 'drivingtheory.png',
+                url: 'https://drivingtheory.maxorlovsky.com',
+                html: true,
+                js: true,
+                css: true,
+                php: true,
+                db: true
+            },
+            {
+                name: 'UniCon eSports',
+                description: 'UniCon eSports, branch of UniCon Latvia responsible for Esports',
+                image: 'unicon-esports.png',
+                url: 'https://esports.unicon.lv',
+                html: true,
+                js: true,
+                css: true,
+                php: false,
+                db: false
+            },
+            {
                 name: 'StarVegas.es (Greentube)',
                 description: 'Online Casino for Spanish market. Did development of a project in a team and new features afterwards. Symphony CMS and internal API was used for storring config and data in database. XSLT as templating system.',
                 image: 'starvegas-es.png',
@@ -22,7 +44,7 @@ export class WorkPage {
             },
             {
                 name: 'FenikssCasino.Lv (Greentube)',
-                description: 'Online Casino for Latvian market. When I joined team who developed this project it was mostly done. What I did for this project was improvements and new features afterwards. Symphony CMS and internal API was used for storring config and data in database. XSLT as templating system.',
+                description: 'Online Casino for Spanish market. Did development of a project in a team and new features afterwards. Symphony CMS and internal API was used for storring config and data in database. XSLT as templating system.',
                 image: 'fenikss.png',
                 url: 'https://www.feniksscasino.lv',
                 html: true,
@@ -142,6 +164,17 @@ export class WorkPage {
                 db: true
             },
             {
+                name: 'Project Adviser',
+                description: '"Business card" website, for jurisdictional company. Only HTML & CSS layout.',
+                image: 'project-adviser.png',
+                url: 'http://www.projectadviser.lv',
+                html: true,
+                js: false,
+                css: true,
+                php: false,
+                db: false
+            },
+            {
                 name: 'Vulkan',
                 description: 'Latvian Casino website. Just another "business card" website, with some interesting functionality.',
                 image: 'vulkan.png',
@@ -188,7 +221,7 @@ export class WorkPage {
             {
                 name: 'Tiens 4 You',
                 description: 'Social marketing website that I didn\'t build from the start. Many freelancers worked on it before and after me. I was implementing few social features on the website such as chats and extending "tree level system".',
-                image: 'tiens.png',
+                image: 'tiens4you.png',
                 url: 'http://www.tiens4you.eu',
                 html: true,
                 js: true,
@@ -217,6 +250,28 @@ export class WorkPage {
                 css: true,
                 php: true,
                 db: true
+            },
+            {
+                name: 'Davay-Davay',
+                description: 'Project for people in Germany who would like to learn Russian language, e-commerce involved',
+                image: 'davay-davay.png',
+                url: 'http://www.davay-davay.de',
+                html: true,
+                js: true,
+                css: true,
+                php: true,
+                db: true
+            },
+            {
+                name: 'Bithill',
+                description: 'Project to monitor, buy and sell bitcoin. Only HTML and CSS work was done.',
+                image: 'bithill.jpg',
+                url: '',
+                html: true,
+                js: false,
+                css: true,
+                php: false,
+                db: false
             },
             {
                 name: 'Ir Atbildes',
