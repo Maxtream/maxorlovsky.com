@@ -7,7 +7,9 @@
     "type": "git",
     "url": "https://github.com/maxorlovsky/maxorlovsky.com.git"
   },
-  "scripts": {},
+  "scripts": {
+    "release": "git pull"
+  },
   "version": "3.0.0",
   "devDependencies": {},
   "dependencies": {}
